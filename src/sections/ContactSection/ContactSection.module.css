@@ -474,6 +474,30 @@
 }
 
 /* Responsive Design */
+@media (max-width: 1200px) {
+  .contactContent {
+    gap: var(--spacing-10);
+  }
+  
+  .sectionTitle {
+    font-size: var(--font-size-5xl);
+  }
+}
+
+@media (max-width: 1024px) {
+  .contactContent {
+    gap: var(--spacing-8);
+  }
+  
+  .sectionTitle {
+    font-size: var(--font-size-4xl);
+  }
+  
+  .mapIframe {
+    height: 350px;
+  }
+}
+
 @media (max-width: 968px) {
   .contactContent {
     grid-template-columns: 1fr;
@@ -486,6 +510,10 @@
   
   .contactForm {
     order: 1;
+  }
+  
+  .mapSection {
+    order: 3;
   }
 }
 
@@ -559,6 +587,18 @@
 }
 
 @media (max-width: 480px) {
+  .contactSection {
+    padding: var(--spacing-12) 0;
+  }
+  
+  .container {
+    padding: 0 var(--spacing-3);
+  }
+  
+  .sectionTitle {
+    font-size: var(--font-size-2xl);
+  }
+  
   .contactInfo,
   .contactForm {
     padding: var(--spacing-6);
@@ -577,14 +617,48 @@
   .inputWrapper input,
   .inputWrapper textarea {
     padding: var(--spacing-3) var(--spacing-3) var(--spacing-3) var(--spacing-10);
+    font-size: var(--font-size-base);
   }
   
-  .mapPlaceholder {
-    padding: var(--spacing-6);
+  .mapIframe {
+    height: 250px;
   }
   
-  .mapPlaceholder h4 {
+  .locationCard {
+    min-width: 180px;
+    padding: var(--spacing-2) var(--spacing-3);
+  }
+  
+  .locationIcon {
+    font-size: var(--font-size-lg);
+  }
+  
+  .locationInfo h4 {
+    font-size: var(--font-size-sm);
+  }
+  
+  .locationInfo p {
+    font-size: var(--font-size-xs);
+  }
+}
+
+@media (max-width: 320px) {
+  .sectionTitle {
     font-size: var(--font-size-xl);
+  }
+  
+  .contactInfo,
+  .contactForm {
+    padding: var(--spacing-4);
+  }
+  
+  .mapIframe {
+    height: 200px;
+  }
+  
+  .locationCard {
+    min-width: 160px;
+    padding: var(--spacing-2);
   }
 }
 

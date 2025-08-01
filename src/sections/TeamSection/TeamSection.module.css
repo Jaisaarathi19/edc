@@ -365,9 +365,31 @@
 }
 
 /* Responsive Design */
-@media (max-width: 968px) {
+@media (max-width: 1200px) {
+  .teamGrid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--spacing-10);
+  }
+  
+  .sectionTitle {
+    font-size: var(--font-size-5xl);
+  }
+}
+
+@media (max-width: 1024px) {
   .teamGrid {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-8);
+  }
+  
+  .sectionTitle {
+    font-size: var(--font-size-4xl);
+  }
+}
+
+@media (max-width: 968px) {
+  .teamGrid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: var(--spacing-8);
   }
 }
@@ -419,8 +441,25 @@
 }
 
 @media (max-width: 480px) {
+  .teamSection {
+    padding: var(--spacing-12) 0;
+  }
+  
+  .container {
+    padding: 0 var(--spacing-3);
+  }
+  
+  .sectionTitle {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .sectionSubtitle {
+    font-size: var(--font-size-sm);
+  }
+  
   .teamGrid {
     grid-template-columns: 1fr;
+    gap: var(--spacing-5);
   }
   
   .memberCard {
@@ -440,6 +479,19 @@
     font-size: var(--font-size-2xl);
   }
   
+  .memberName {
+    font-size: var(--font-size-lg);
+  }
+  
+  .memberRole {
+    font-size: var(--font-size-sm);
+  }
+  
+  .memberBio {
+    font-size: var(--font-size-xs);
+    line-height: var(--line-height-relaxed);
+  }
+  
   .socialLinks {
     gap: var(--spacing-2);
   }
@@ -447,6 +499,41 @@
   .socialLinks a {
     font-size: var(--font-size-base);
     padding: var(--spacing-1);
+  }
+  
+  .fullTeamSection {
+    padding: var(--spacing-6);
+  }
+  
+  .fullTeamContent h3 {
+    font-size: var(--font-size-xl);
+  }
+  
+  .fullTeamContent p {
+    font-size: var(--font-size-sm);
+  }
+}
+
+@media (max-width: 320px) {
+  .sectionTitle {
+    font-size: var(--font-size-xl);
+  }
+  
+  .cardInner {
+    padding: var(--spacing-4);
+  }
+  
+  .memberImage {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .memberName {
+    font-size: var(--font-size-base);
+  }
+  
+  .memberRole {
+    font-size: var(--font-size-xs);
   }
 }
 

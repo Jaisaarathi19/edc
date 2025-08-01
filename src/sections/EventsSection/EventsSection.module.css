@@ -464,10 +464,21 @@
 }
 
 /* Responsive Design */
+@media (max-width: 1200px) {
+  .eventsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: var(--spacing-10);
+  }
+}
+
 @media (max-width: 1024px) {
   .eventsGrid {
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: var(--spacing-8);
+  }
+  
+  .sectionTitle {
+    font-size: var(--font-size-5xl);
   }
 }
 
@@ -514,11 +525,19 @@
   .eventDescription {
     font-size: var(--font-size-base);
   }
+  
+  .viewMoreSection {
+    padding: var(--spacing-8);
+  }
 }
 
 @media (max-width: 480px) {
   .eventsSection {
     padding: var(--spacing-16) 0;
+  }
+  
+  .container {
+    padding: 0 var(--spacing-3);
   }
   
   .sectionHeader {
@@ -529,6 +548,10 @@
     font-size: var(--font-size-3xl);
   }
   
+  .sectionSubtitle {
+    font-size: var(--font-size-base);
+  }
+  
   .eventCard {
     padding: var(--spacing-5);
   }
@@ -537,9 +560,48 @@
     transform: translateY(-5px);
   }
   
+  .eventIcon {
+    width: 45px;
+    height: 45px;
+    font-size: var(--font-size-lg);
+  }
+  
+  .eventTitle {
+    font-size: var(--font-size-lg);
+  }
+  
+  .eventDescription {
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-relaxed);
+  }
+  
   .viewMoreSection {
     margin-top: var(--spacing-12);
-    padding: var(--spacing-8);
+    padding: var(--spacing-6);
+  }
+  
+  .viewMoreButton {
+    width: 100%;
+  }
+}
+
+@media (max-width: 320px) {
+  .eventsSection {
+    padding: var(--spacing-12) 0;
+  }
+  
+  .sectionTitle {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .eventCard {
+    padding: var(--spacing-4);
+  }
+  
+  .eventIcon {
+    width: 40px;
+    height: 40px;
+    font-size: var(--font-size-base);
   }
 }
 

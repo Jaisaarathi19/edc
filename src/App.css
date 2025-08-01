@@ -72,6 +72,14 @@
   --line-height-tight: 1.25;
   --line-height-normal: 1.5;
   --line-height-relaxed: 1.75;
+  
+  /* Responsive Breakpoints */
+  --breakpoint-xs: 320px;
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-2xl: 1400px;
 }
 
 /* CSS Reset */
@@ -295,6 +303,22 @@ main {
 }
 
 /* Responsive Design */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 95%;
+    padding: 0 var(--spacing-6);
+  }
+}
+
+@media (max-width: 1024px) {
+  h1 { font-size: var(--font-size-5xl); }
+  h2 { font-size: var(--font-size-4xl); }
+  
+  .section {
+    padding: var(--spacing-16) 0;
+  }
+}
+
 @media (max-width: 768px) {
   h1 { font-size: var(--font-size-4xl); }
   h2 { font-size: var(--font-size-3xl); }
@@ -307,11 +331,18 @@ main {
   .section {
     padding: var(--spacing-12) 0;
   }
+  
+  /* Touch-friendly spacing */
+  button, a {
+    min-height: 44px;
+    min-width: 44px;
+  }
 }
 
 @media (max-width: 480px) {
   h1 { font-size: var(--font-size-3xl); }
   h2 { font-size: var(--font-size-2xl); }
+  h3 { font-size: var(--font-size-xl); }
   
   .container {
     padding: 0 var(--spacing-3);
@@ -319,6 +350,19 @@ main {
   
   .section {
     padding: var(--spacing-10) 0;
+  }
+}
+
+@media (max-width: 320px) {
+  h1 { font-size: var(--font-size-2xl); }
+  h2 { font-size: var(--font-size-xl); }
+  
+  .container {
+    padding: 0 var(--spacing-2);
+  }
+  
+  .section {
+    padding: var(--spacing-8) 0;
   }
 }
 
