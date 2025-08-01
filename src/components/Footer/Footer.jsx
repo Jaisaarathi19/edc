@@ -123,10 +123,20 @@ const Footer = () => {
                   alt="EDC Logo" 
                   className={styles.footerLogo}
                 />
+                <div className={styles.brandText}>
+                  <h3 className={styles.brandName}>
+                    E-Cell <span className={styles.accent}>REC</span>
+                  </h3>
+                  <p className={styles.brandSubtitle}>
+                    Entrepreneurship Development Cell
+                  </p>
+                </div>
               </div>
               <p className={styles.tagline}>
-                Empowering student entrepreneurs with mentorship and real-world exposure 
-                to build sustainable startups and drive impactful innovation.
+                <span className={styles.taglineHighlight}>Empowering</span> student entrepreneurs with 
+                <span className={styles.taglineHighlight}>mentorship</span> and real-world exposure 
+                to build <span className={styles.taglineHighlight}>sustainable startups</span> and 
+                drive impactful <span className={styles.taglineHighlight}>innovation</span>.
               </p>
             </div>
           </motion.div>
